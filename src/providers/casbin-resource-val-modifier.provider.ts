@@ -19,6 +19,7 @@ export class CasbinResValModifierProvider
 
     let modifiedRes: string;
 
+    // This is sample implementation. A custom logic could be implemented here as per application's needs.
     const resId: string = pathParams[0];
 
     if (resId) {

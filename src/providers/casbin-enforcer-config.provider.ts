@@ -17,6 +17,8 @@ export class CasbinEnforcerConfigProvider
       __dirname,
       './../../fixtures/casbin/model.conf',
     );
+
+    // Write business logic to find out the allowed resources for this user. Below is a dummy value.
     const allowedRes = ['ping', 'ping2', 'ping3'];
 
     const policy = path.resolve(__dirname, './../../fixtures/casbin/policy.csv');

@@ -37,7 +37,7 @@ export class PingController {
 
   // Map to `GET /ping`
   @authorize({permissions: ['read'], resource: 'ping', isCasbinPolicy: false})
-  @get('/ring/{id}', {
+  @get('/ping/{id}', {
     responses: {
       '200': PING_RESPONSE,
     },
