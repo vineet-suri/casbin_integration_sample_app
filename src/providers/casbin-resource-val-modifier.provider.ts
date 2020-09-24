@@ -1,5 +1,9 @@
 import {Getter, inject, Provider} from '@loopback/context';
-import {AuthorizationBindings, AuthorizationMetadata, CasbinResourceModifierFn} from 'loopback4-authorization';
+import {
+  AuthorizationBindings,
+  AuthorizationMetadata,
+  CasbinResourceModifierFn,
+} from 'loopback4-authorization';
 
 export class CasbinResValModifierProvider
   implements Provider<CasbinResourceModifierFn> {
@@ -9,8 +13,7 @@ export class CasbinResValModifierProvider
   ) {}
 
   value(): CasbinResourceModifierFn {
-    return (pathParams: string[]) =>
-      this.action(pathParams);
+    return (pathParams: string[]) => this.action(pathParams);
   }
 
   async action(pathParams: string[]): Promise<string> {
@@ -23,11 +26,11 @@ export class CasbinResValModifierProvider
     const resId: string = pathParams[0];
 
     if (resId) {
-      modifiedRes = `${res}${resId}`
+      modifiedRes = `${res}${resId}`;
     } else {
-      modifiedRes = res;
+      modifiedRes = `${res}`;
     }
 
-    return (modifiedRes);
+    return modifiedRes;
   }
 }

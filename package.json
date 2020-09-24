@@ -52,7 +52,7 @@
     "@loopback/openapi-v3": "^3.0.0",
     "@loopback/repository": "^2.5.1",
     "@loopback/repository-json-schema": "^2.4.10",
-    "@loopback/rest": "^5.0.1",
+    "@loopback/rest": "^7.0.1",
     "@loopback/rest-explorer": "^2.0.0",
     "@loopback/service-proxy": "^2.3.0",
     "@sourceloop/core": "^1.0.0-alpha.9",
@@ -62,17 +62,17 @@
     "tslib": "^1.10.0"
   },
   "devDependencies": {
-    "@loopback/build": "^4.0.0",
-    "source-map-support": "^0.5.16",
-    "@loopback/testlab": "^2.0.0",
-    "@types/node": "^10.17.17",
-    "@typescript-eslint/parser": "^2.22.0",
-    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@loopback/build": "^6.2.4",
     "@loopback/eslint-config": "^6.0.0",
+    "@loopback/testlab": "^3.2.6",
+    "@types/node": "^10.17.17",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-eslint-plugin": "^2.2.1",
     "eslint-plugin-mocha": "^6.3.0",
+    "source-map-support": "^0.5.16",
     "typescript": "~3.8.3"
   }
 }

@@ -1,16 +1,22 @@
 import {inject} from '@loopback/context';
 import {
   FindRoute,
-  HttpErrors, InvokeMethod,
+  HttpErrors,
+  InvokeMethod,
   ParseParams,
   Reject,
   RequestContext,
   RestBindings,
   Send,
-  SequenceHandler
+  SequenceHandler,
 } from '@loopback/rest';
 import {IAuthUserWithPermissions} from '@sourceloop/core';
-import {AuthorizationBindings, AuthorizeErrorKeys, CasbinAuthorizeFn, CasbinResourceModifierFn} from 'loopback4-authorization';
+import {
+  AuthorizationBindings,
+  AuthorizeErrorKeys,
+  CasbinAuthorizeFn,
+  CasbinResourceModifierFn,
+} from 'loopback4-authorization';
 
 const SequenceActions = RestBindings.SequenceActions;
 
@@ -41,13 +47,15 @@ export class MySequence implements SequenceHandler {
         authClientId: 1,
         role: 'admin',
         firstName: 'Test',
-        lastName: 'user'
+        lastName: 'user',
       };
 
       const resVal = await this.casbinResModifierFn(args);
 
       const isAccessAllowed: boolean = await this.checkAuthorisation(
-        authUser, resVal
+        authUser,
+        resVal,
+        request,
       );
 
       if (!isAccessAllowed) {
